@@ -1,12 +1,14 @@
+import { useState } from "react";
 import { Alert, Image, StatusBar, View } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { colors } from "@/styles/colors";
+import { Link, Redirect } from "expo-router";
+
 import { Input } from "@/components/input";
 import { Button } from "@/components/button";
-import { Link, Redirect } from "expo-router";
-import { useState } from "react";
+
 import { api } from "@/server/api";
 import { useBadgeStore } from "@/store/badge-store";
+import { colors } from "@/styles/colors";
 
 export default function Home() {
   const [code, setCode] = useState("");

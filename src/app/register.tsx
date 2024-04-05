@@ -1,13 +1,15 @@
+import { useState } from "react";
 import { Alert, Image, StatusBar, View } from "react-native";
 import { FontAwesome6, MaterialIcons } from "@expo/vector-icons";
-import { colors } from "@/styles/colors";
+import { Link, router } from "expo-router";
+import axios from "axios";
+
 import { Input } from "@/components/input";
 import { Button } from "@/components/button";
-import { Link, router } from "expo-router";
-import { useState } from "react";
+
 import { api } from "@/server/api";
-import axios from "axios";
 import { useBadgeStore } from "@/store/badge-store";
+import { colors } from "@/styles/colors";
 
 const EVENT_ID = "56b2937b-2da8-4864-8c0d-ee36bc5a2438";
 
